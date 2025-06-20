@@ -1,0 +1,232 @@
+# ===================================
+# English Word Learner - .gitignore
+# ===================================
+
+# ===== Environment Variables =====
+# 忽略包含敏感信息的环境变量文件
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+frontend/.env
+
+# 保留环境变量模板文件
+!.env.example
+!backend/.env.example
+!frontend/.env.example
+
+# ===== Node.js Dependencies =====
+# 忽略所有 node_modules 目录
+node_modules/
+*/node_modules/
+**/node_modules/
+
+# npm 相关文件
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# 包管理器锁定文件（可选择性忽略）
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# ===== 前端构建输出 =====
+# Vite 构建输出
+frontend/dist/
+frontend/build/
+
+# React 相关
+frontend/.vite/
+frontend/vite.config.js.timestamp-*
+
+# 静态资源缓存
+frontend/.cache/
+
+# ===== 后端相关 =====
+# 上传的图片文件（包含用户敏感数据）
+backend/uploads/
+backend/temp/
+uploads/
+
+# 保留 uploads 目录结构
+!backend/uploads/.gitkeep
+
+# 日志文件
+backend/logs/
+*.log
+
+# 运行时文件
+backend/pids/
+*.pid
+*.seed
+*.pid.lock
+
+# ===== IDE 和编辑器 =====
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.swp
+*.swo
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*~
+*.swp
+*.swo
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ===== 操作系统文件 =====
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===== 测试和覆盖率 =====
+# 测试覆盖率报告
+coverage/
+*.lcov
+.nyc_output/
+
+# Jest
+jest.config.js
+
+# ===== 缓存和临时文件 =====
+# 各种缓存目录
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+
+# 临时文件
+*.tmp
+*.temp
+.tmp/
+.temp/
+tmp/
+temp/
+
+# ===== 构建和部署 =====
+# 构建输出
+dist/
+build/
+out/
+
+# 部署相关
+.vercel/
+.netlify/
+
+# ===== 其他 =====
+# 备份文件
+*.bak
+*.backup
+*.old
+
+# 压缩文件
+*.zip
+*.tar.gz
+*.rar
+
+# 数据库文件（如果使用本地数据库）
+*.db
+*.sqlite
+*.sqlite3
+
+# 证书文件
+*.pem
+*.key
+*.crt
+*.csr
+
+# 项目特定的忽略文件
+# 测试图片（如果有的话）
+test-images/
+sample-images/
+
+# 文档生成
+docs/build/
+
+# 性能分析文件
+*.cpuprofile
+*.heapprofile
+
+# ===== 开发工具 =====
+# ESLint
+.eslintcache
+
+# Prettier
+.prettierignore
+
+# TypeScript
+*.tsbuildinfo
+
+# Storybook
+storybook-static/
+
+# ===== 服务器相关 =====
+# PM2
+.pm2/
+
+# 服务器日志
+server.log
+error.log
+access.log
